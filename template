@@ -1,0 +1,27 @@
+# Template file for 'zte-udev-rules'
+
+pkgname=zte-udev-rules
+version=20230819
+revision=1
+short_desc="Lista de regras udev para zte."
+maintainer="Fernando Souza <https://tuxslack.github.io/>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/tuxslack/zte-udev-rules"
+changelog="https://github.com/tuxslack/zte-udev-rules/releases"
+distfiles="https://github.com/tuxslack/zte-udev-rules/archive/${version}.tar.gz"
+checksum=0e655b6cbbf5cbc203b8493ec1d9159340008068bf8637d622bdb2d7fe4480ee
+system_groups="adbusers"
+archs="x86_64"
+hostmakedepends="eudev usb-modeswitch usb-modeswitch-data ModemManager NetworkManager network-manager-applet mobile-broadband-provider-info"
+depends=""
+checkdepends=""
+
+
+do_install() {
+	vinstall 40-zte.rules 644 usr/lib/udev/rules.d 40-zte.rules
+}
+
+
+post_install() {
+	echo "udevadm control --reload-rules"
+}

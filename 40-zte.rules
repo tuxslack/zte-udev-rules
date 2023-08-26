@@ -1,0 +1,203 @@
+#
+# Adiciona suporte a modem USB da ZTE
+#
+# https://www.zte.com.cn/global/
+#
+#
+# Por que meu modem USB não está funcionando?
+#
+# Pode ser necessário remover e inseri-lo novamente se não estiver conectado. 
+#
+#
+
+
+# Interface do usuário do Modem Manager: um excelente aplicativo para gerenciar modems USB
+#
+# Modem Manager gui
+#
+# https://blog.desdelinux.net/pt/modem-manager-gui-excelente-app-gestion-modems-usb/
+# https://sourceforge.net/projects/modem-manager-gui/support
+
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF79S
+#
+# https://www.claro.com.br/
+#
+# 4GMax 
+# hotspots Wi-Fi
+#
+#
+# Acesse o navegador e digite 192.168.0.1
+#
+# O modem cria uma rede Wi-Fi para acessar a internet quando esta conectado a porta USB?
+#
+#
+# Detectando todos os dispositivos conectados.
+#
+# lsusb
+#
+
+
+
+# https://configuraraparelhos.claro.com.br/zte/mf79s
+# https://www.claro.com.br/internet/internet-movel
+# https://configuraraparelhos.claro.com.br/zte/mf79s/funcoes-avancadas/como-configurar-a-apn-no-modem
+# https://configuraraparelhos.claro.com.br/zte/mf79s/primeiros-passos/onde-localizar-as-informacoes-de-acesso-do-modem
+# https://configuraraparelhos.claro.com.br/zte/mf79s/funcoes-basicas/como-acessar-as-configuracoes-do-modem-pelo-computador
+# https://configuraraparelhos.claro.com.br/tipos-de-aparelhos/internet-movel/modem-usb
+# https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/Configurar-modem-ZTE-MF79S-raspberry
+# http://files.customersaas.com/files/Modems_Wi-Fi_ZTE_MF79S_Manual_do_usu%C3%A1rio.pdf
+
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF79U (deve se o mais atual em 2023)
+#
+# https://www.claro.com.br/
+#
+# WiFi Hotspot
+# 4GMax 
+#
+#
+# Detectando todos os dispositivos conectados.
+#
+# lsusb
+#
+
+
+
+# https://configuraraparelhos.claro.com.br/zte/mf79u
+# https://www.claro.com.br/internet/internet-movel
+# https://configuraraparelhos.claro.com.br/zte/mf79u/funcoes-avancadas/como-configurar-a-apn-no-modem
+# https://configuraraparelhos.claro.com.br/tipos-de-aparelhos/internet-movel/modem-usb
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF662
+
+
+
+# https://www.systranbox.com/how-to-install-zte-usb-modem-in-linux/
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF833V
+
+
+
+# https://www.systranbox.com/how-to-install-zte-usb-modem-in-linux/
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF110 
+
+# 
+#
+# Detectando todos os dispositivos conectados.
+#
+# lsusb
+#
+# Bus 001 Device 004: ID 19d2:0031 ONDA Communication S.p.A.
+
+
+# ATTR{idVendor}=="19d2", ATTR{idProduct}=="2000", RUN+="usb_modeswitch '/%k'"
+
+# ATTR{idVendor}=="19d2", ATTR{idProduct}=="0031", RUN+="usb_modeswitch '/%k'"
+
+
+# https://www.vivaolinux.com.br/topico/Perguntas-Frequentes/Internet-3G-2
+# https://www.vivaolinux.com.br/artigos/impressora.php?codigo=12117
+
+# ---------------------------------------------------------------------------------------
+
+
+# Modem ZTE MF626 - 3G
+
+
+ATTR{idVendor}=="19d2", ATTR{idProduct}=="1001", RUN+="usb_modeswitch '/%k'"
+
+
+# https://www.vivaolinux.com.br/artigos/impressora.php?codigo=11202
+# https://www.vivaolinux.com.br/artigo/Configurando-o-modem-ZTE-MF626-com-Vivo3G-no-Debian
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF622 (aka "Onda MDC502HS"), MF100 and others
+
+
+ATTR{idVendor}=="19d2", ATTR{idProduct}=="0002", RUN+="usb_modeswitch '/%k'"
+
+
+# https://www.vivaolinux.com.br/topico/Perguntas-Frequentes/Internet-3G-2?pagina=02
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE 
+
+# ZTE MF622 (aka "Onda MDC502HS")
+# ZTE MF626
+# ZTE MF628+ (tested version from Telia / Sweden)
+# ZTE MF633
+# ZTE MF636 (aka "Telstra / BigPond 7.2 Mobile Card")
+# ZTE MF637
+
+
+# Seria o modem ZTE MF110?
+
+ATTR{idVendor}=="19d2", ATTR{idProduct}=="0031", RUN+="usb_modeswitch '/%k'"
+
+
+# https://www.vivaolinux.com.br/artigos/impressora.php?codigo=11516
+# https://www.vivaolinux.com.br/script/Script-para-configurar-Vivo-3G-sem-pppconfig-e-wvdial
+# https://www.vivaolinux.com.br/dica/Modem-ZTE-MF636-no-Mandriva-2009.1
+# https://www.vivaolinux.com.br/topico/WiFi/como-configurar-o-modem-USB-mf636-brasil-telecom-3g-no-openSuse
+# https://ubuntuforum-br.org/index.php?topic=44656.0
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF79S
+
+# ATTR{idVendor}=="19d2", ATTR{idProduct}=="", RUN+="usb_modeswitch '/%k'"
+
+# https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/Configurar-modem-ZTE-MF79S-raspberry
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF193
+
+# ATTR{idVendor}=="19d2", ATTR{idProduct}=="", RUN+="usb_modeswitch '/%k'"
+
+# https://www.vivaolinux.com.br/topico/Redes-3G/Internet-3G-modem-ZTE-MF193-vivo-com-o-Puppy-linux
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF195
+
+# ATTR{idVendor}=="19d2", ATTR{idProduct}=="", RUN+="usb_modeswitch '/%k'"
+
+# https://www.vivaolinux.com.br/dica/Modem-ZTE-195-no-Ubuntu
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF190
+
+# ATTR{idVendor}=="19d2", ATTR{idProduct}=="", RUN+="usb_modeswitch '/%k'"
+
+# https://www.vivaolinux.com.br/topico/Rede-Wireless/Modem-ZTE-MF190
+
+# ---------------------------------------------------------------------------------------
+
+# Modem ZTE MF645
+
+# ATTR{idVendor}=="19d2", ATTR{idProduct}=="", RUN+="usb_modeswitch '/%k'"
+
+# https://www.vivaolinux.com.br/dica/Instalando-modem-ZTE-MF645-Vivo-3G-no-Ubuntu-8.04
+
+# ---------------------------------------------------------------------------------------
+
+
+
+
+
