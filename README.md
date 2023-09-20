@@ -1,2 +1,3 @@
 # zte-udev-rules
-Adiciona suporte a modem USB da ZTE.
+
+Suporte a modem USB da ZTE para o programa NetworkManager.
